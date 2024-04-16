@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Appbar from "MUI-components/Appbar";
-import Drawerr from "MUI-components/Drawer";
+import Appbar from "../MUI-components/Appbar";
+import Drawerr from "../MUI-components/Drawer";
 import { Box, CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import getDesignTokens from "styles/MyTheme";
+import getDesignTokens from "../styles/MyTheme";
 
 const drawerWidth = 240;
 

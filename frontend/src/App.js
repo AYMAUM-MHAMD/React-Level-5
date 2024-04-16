@@ -1,4 +1,4 @@
-import Home from "pages/home/Home";
+import Home from "./pages/home/Home";
 import Root from "./pages/Root";
 import {
   createBrowserRouter,
@@ -11,7 +11,7 @@ import {
 
 
 import NotFound from "./pages/NotFound";
-import Cart from "pages/cart/Cart";
+import Cart from "./pages/cart/Cart";
 import ProductDetails from "./pages/Details/ProductDetails";
 
 const router = createBrowserRouter(
