@@ -1,8 +1,8 @@
 .details-page.app{
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
   margin: auto;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 3px #ccc;
 }
 .details-page .details{
   display: flex;
@@ -22,12 +22,13 @@
   max-height: 400px;
   display: block;
   object-fit: cover;
+  border-radius: 3px;
 }
 
 .details-page .details .box{
-  max-width: 500px;
+  max-width: 450px;
   min-width: 290px;
-  margin: 25px;
+  margin: 20px;
 }
 .details-page .box .row{
   display: flex;

@@ -7,9 +7,7 @@ import {
   styled,
   Badge,
 } from "@mui/material";
-import {
-  useGetOneProductsQuery,
-} from "../../Redux/productsApi";
+import { useGetOneProductsQuery } from "../../Redux/productsApi";
 import "./ProductDetails.css";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
@@ -49,7 +47,6 @@ const ProductDetails = () => {
     setindex(index);
     const images = myRef.current.children;
     for (let i = 0; i < images.length; i++) {
-
       images[i].className = images[i].className.replace("active", "");
     }
     images[index].className = "active";
@@ -91,20 +88,27 @@ const ProductDetails = () => {
 
           <div className="box">
             <div className="row">
-              <h2>{data.productName}</h2>
-              <span style={{fontSize: "19px"}}>${data.price}</span>
+              <h2 style={{ fontSize: "29px" }}>{data.productName}</h2>
+              <span style={{ fontSize: "19px" }}>${data.price}</span>
             </div>
-            <p style={{fontSize: "19px"}}>{data.description}</p>
             {/* <Colors colors={data.colors} /> */}
+            <p style={{ fontSize: "16px" }}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing
+            </p>
+
+            <p style={{ fontSize: "17px" }}>{data.description}</p>
+
             <DetailsThumb
               images={data.imageLink}
               tab={handleTab}
               myRef={myRef}
             />
 
+            {/* <button className="cart">Add to cart</button> */}
             {selectedProductsID.includes(data.id) ? (
               <div
                 style={{
+                  marginTop: "33px",
                   fontSize: "19px",
                   display: "flex",
                   alignItems: "center",
@@ -140,7 +144,13 @@ const ProductDetails = () => {
                 onClick={() => {
                   dispatch(addToCart(data));
                 }}
-                sx={{fontSize: "19px", textTransform: "capitalize", p: 1, lineHeight: 1.1 }}
+                sx={{
+                  marginTop: "33px",
+                  fontSize: "19px",
+                  textTransform: "capitalize",
+                  p: 1,
+                  lineHeight: 1.1,
+                }}
                 variant="contained"
                 color="primary"
               >
